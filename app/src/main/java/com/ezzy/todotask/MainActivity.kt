@@ -79,9 +79,6 @@ class MainActivity : AppCompatActivity(), CustomDropDownAdapter.onSelected,
 
     private fun initSpinner(userModel: UserModel) {
 
-//        val customDropDownAdapter = CustomDropDownAdapter(this, userModel,this@MainActivity)
-//
-//        binding.mspinner.adapter = customDropDownAdapter
         var userListName = ArrayList<String>();
         var sizeOfUserModel = userModel.size - 1;
         for (i in 0..sizeOfUserModel) {
@@ -101,9 +98,6 @@ class MainActivity : AppCompatActivity(), CustomDropDownAdapter.onSelected,
                 parent: AdapterView<*>,
                 view: View, position: Int, id: Long
             ) {
-//                Toast.makeText(this@MainActivity,
-//                    getString(R.string.selected_item) + " " +
-//                            "" + languages[position], Toast.LENGTH_SHORT).show()
 
                 Log.d("selected item is ", userModel[position].email)
                 Log.d("item is selected", userModel[position].id.toString())
